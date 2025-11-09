@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋小游戏</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="game-header">
+            <h1 class="game-title">🎯 五子棋小游戏 🎯</h1>
+            <div class="developer-info">开发者 - 王梓明</div>
+        </header>
+
+        <div class="game-container">
+            <div class="game-info">
+                <div class="player-info">
+                    <div class="player black-player active">
+                        <div class="player-icon">⚫</div>
+                        <span>黑棋玩家</span>
+                    </div>
+                    <div class="player white-player">
+                        <div class="player-icon">⚪</div>
+                        <span>白棋玩家</span>
+                    </div>
+                </div>
+                
+                <div class="game-stats">
+                    <div class="stat">
+                        <span class="stat-label">回合数:</span>
+                        <span id="round-count">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">游戏状态:</span>
+                        <span id="game-status">进行中</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="board-container">
+                <canvas id="game-board" width="600" height="600"></canvas>
+                <div class="board-overlay" id="board-overlay"></div>
+            </div>
+
+            <div class="controls">
+                <button id="restart-btn" class="control-btn restart">重新开始</button>
+                <button id="undo-btn" class="control-btn undo">悔棋</button>
+                <button id="hint-btn" class="control-btn hint">提示</button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>游戏规则</h3>
+            <ul>
+                <li>⚫ 黑棋先行，轮流落子</li>
+                <li>🎯 任意方向连成五子即获胜</li>
+                <li>🔄 点击"悔棋"可撤销上一步</li>
+                <li>💡 点击"提示"获得建议落子位置</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
